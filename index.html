@@ -1,125 +1,14 @@
-html :
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>포트폴리오 - 프로젝트로 말하는 개발 이야기</title>
+    <title>개발자 최기현 포트폴리오</title>
     <script src="https://cdn.tailwindcss.com"></script>
-<style>
-    /* Global Styles */
-    * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    }
-
-    /* Smooth scrolling */
-    html {
-    scroll-behavior: smooth;
-    }
-
-    /* Monochrome aesthetic */
-    body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    }
-
-    /* Project card initial state for animation */
-    .project-card {
-        opacity: 1;
-        transform: translateY(0);
-        transition: all 0.4s ease;
-    }
-
-    .project-card.hidden {
-        opacity: 0;
-        transform: translateY(20px) scale(0.95);
-        pointer-events: none;
-        position: absolute; /* 자리 차지 안 하도록 */
-    }
-
-    /* Filter button hover effect */
-    .filter-btn {
-    cursor: pointer;
-    user-select: none;
-    }
-
-    /* Hover effects for cards */
-    .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    }
-
-    /* Image hover effect */
-    .project-card img {
-    transition: transform 0.5s ease, opacity 0.5s ease;
-    }
-
-    .project-card:hover img {
-    transform: scale(1.05);
-    opacity: 1;
-    }
-
-    /* Custom animation for page load */
-    @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    }
-
-    /* Header animation */
-    header {
-    animation: fadeInUp 0.8s ease;
-    }
-
-    /* Filter tabs animation */
-    .filter-tabs {
-    animation: fadeInUp 1s ease 0.2s both;
-    }
-
-    /* Responsive image handling */
-    .project-card img {
-    transition: transform 0.3s ease;
-    }
-
-    .project-card:hover img {
-    transform: scale(1.1);
-    }
-
-    /* Custom scrollbar - Monochrome style */
-    ::-webkit-scrollbar {
-    width: 8px;
-    }
-
-    ::-webkit-scrollbar-track {
-    background: #f5f5f5;
-    }
-
-    ::-webkit-scrollbar-thumb {
-    background: #333;
-    border-radius: 4px;
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-    background: #000;
-    }
-
-    /* Print styles */
-    @media print {
-    .filter-tabs {
-        display: none;
-    }
-    .project-card {
-        page-break-inside: avoid;
-    }
-    }
-</style>
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body class="bg-white text-gray-900">
     <div class="container mx-auto px-4 py-8 max-w-7xl">
         
@@ -129,30 +18,28 @@ html :
                 <!-- Profile Image -->
                 <div class="md:col-span-1 flex justify-center md:justify-start">
                     <div class="relative">
-                        <img src="./images/profile-photo.jpg" alt="증명사진" 
-                             class="w-48 h-48 rounded-full object-cover border-4 border-gray-900 shadow-xl"
+                        <img src="./images/profile-photo1.png" alt="증명사진" 
+                             class="w-80 h-80 rounded-full object-cover border-4 border-gray-900 shadow-xl"
                              onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%23e5e5e5%22/><text x=%2250%22 y=%2250%22 font-family=%22Arial%22 font-size=%2214%22 fill=%22%23999%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22>Photo</text></svg>'">
                     </div>
                 </div>
                 
                 <!-- Profile Info -->
                 <div class="md:col-span-2">
-                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Your Name</h1>
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">최기현</h1>
                     <p class="text-xl text-gray-600 mb-6">Full Stack Developer</p>
                     
                     <!-- Personal Info -->
                     <div class="grid md:grid-cols-2 gap-4 mb-8">
                         <div>
                             <h3 class="font-semibold mb-2 text-sm uppercase tracking-wider">Contact</h3>
-                            <p class="text-gray-600">📧 your.email@example.com</p>
-                            <p class="text-gray-600">📱 010-1234-5678</p>
-                            <p class="text-gray-600">📍 Seoul, Korea</p>
+                            <p class="text-gray-600">neibie123@gmail.com</p>
+                            <p class="text-gray-600">010-4002-7335</p>
+                            <p class="text-gray-600">Chuncheon-si, Gangwon-do, Republic of Korea</p>
                         </div>
                         <div>
                             <h3 class="font-semibold mb-2 text-sm uppercase tracking-wider">Links</h3>
-                            <p class="text-gray-600">💼 LinkedIn: /in/yourname</p>
-                            <p class="text-gray-600">🐙 GitHub: /yourusername</p>
-                            <p class="text-gray-600">🌐 Blog: yourblog.com</p>
+                            <p class="text-gray-600">GitHub: https://github.com/gihyeonchoi</p>
                         </div>
                     </div>
                     
@@ -186,7 +73,7 @@ html :
         <!-- Projects Section Header -->
         <header class="text-center mb-12">
             <h2 class="text-3xl md:text-4xl font-bold mb-3">Projects</h2>
-            <p class="text-lg text-gray-600">프로젝트로 말하는 개발 이야기</p>
+            <!-- <p class="text-lg text-gray-600">프로젝트로 말하는 개발 이야기</p> -->
         </header>
 
         <!-- Filter Tabs -->
@@ -211,89 +98,89 @@ html :
         <!-- Projects Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="projects-container">
             
-            <!-- Project Card 1: 실시간 채팅 앱 -->
+            <!-- Project Card 1: 체돌이 -->
             <div class="project-card bg-white border-2 border-gray-900 overflow-hidden transform transition-all duration-300 hover:shadow-2xl" data-category="web">
                 <div class="h-48 bg-gray-900 flex items-center justify-center relative overflow-hidden">
-                    <img src="./images/chat-app-screenshot.png" alt="실시간 채팅 앱" class="w-full h-full object-cover opacity-80" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <img src="./images/chat-app-screenshot.png" alt="체돌이" class="w-full h-full object-cover opacity-80" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     <div class="text-6xl text-white" style="display:none;">🚀</div>
                 </div>
                 <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2">실시간 채팅 앱</h3>
-                    <p class="text-gray-600 text-sm mb-4 leading-relaxed">Socket.io를 활용한 실시간 채팅 애플리케이션. 사용자 인증, 방 생성, 파일 공유 기능을 포함합니다.</p>
+                    <h3 class="text-xl font-bold mb-2">모바일 예약 앱 '체돌이'</h3>
+                    <p class="text-gray-600 text-sm mb-4 leading-relaxed">QR 코드를 발급해 실시간으로 체육관 시설을 이용하기 위한 서비스를 제공합니다.</p>
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="px-3 py-1 bg-gray-100 text-gray-900 text-xs font-medium">Node.js</span>
-                        <span class="px-3 py-1 bg-gray-100 text-gray-900 text-xs font-medium">Socket.io</span>
-                        <span class="px-3 py-1 bg-gray-100 text-gray-900 text-xs font-medium">React</span>
-                        <span class="px-3 py-1 bg-gray-100 text-gray-900 text-xs font-medium">MongoDB</span>
+                        <span class="px-3 py-1 bg-gray-100 text-gray-900 text-xs font-medium">Python</span>
+                        <span class="px-3 py-1 bg-gray-100 text-gray-900 text-xs font-medium">flask</span>
+                        <span class="px-3 py-1 bg-gray-100 text-gray-900 text-xs font-medium">MySQL</span>
+                        <span class="px-3 py-1 bg-gray-100 text-gray-900 text-xs font-medium">Google Map API</span>
                     </div>
                     <div class="flex gap-3">
-                        <a href="https://google.com" class="flex-1 text-center py-2 bg-gray-900 text-white font-medium hover:bg-gray-800 transition-colors">데모 보기</a>
-                        <a href="https://google.com" class="flex-1 text-center py-2 border-2 border-gray-900 text-gray-900 font-medium hover:bg-gray-100 transition-colors">GitHub</a>
+                        <a href="https://youtu.be/B28iQq--vXk" class="flex-1 text-center py-2 bg-gray-900 text-white font-medium hover:bg-gray-800 transition-colors">데모 보기</a>
+                        <a href="https://github.com/gihyeonchoi/polai1" class="flex-1 text-center py-2 border-2 border-gray-900 text-gray-900 font-medium hover:bg-gray-100 transition-colors">GitHub</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Project Card 2: 코로나19 데이터 대시보드 -->
+            <!-- Project Card 2: 핏그립 -->
             <div class="project-card bg-white border-2 border-gray-900 overflow-hidden transform transition-all duration-300 hover:shadow-2xl" data-category="data">
                 <div class="h-48 bg-gray-900 flex items-center justify-center relative overflow-hidden">
-                    <img src="./images/covid-dashboard-screenshot.png" alt="코로나19 데이터 대시보드" class="w-full h-full object-cover opacity-80" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <img src="./images/covid-dashboard-screenshot.png" alt="핏그립" class="w-full h-full object-cover opacity-80" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     <div class="text-6xl text-white" style="display:none;">📊</div>
                 </div>
                 <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2">코로나19 데이터 대시보드</h3>
-                    <p class="text-gray-600 text-sm mb-4 leading-relaxed">공공 API를 활용하여 실시간 코로나19 현황을 시각화한 인터랙티브 대시보드입니다.</p>
+                    <h3 class="text-xl font-bold mb-2">마우스 추천 서비스 'FitGrip'</h3>
+                    <p class="text-gray-600 text-sm mb-4 leading-relaxed">직접 수집한 빅데이터를 활용한 딥러닝 기반의 게이밍 마우스 추천 서비스입니다.</p>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="px-3 py-1 bg-gray-100 text-gray-900 text-xs font-medium">Python</span>
-                        <span class="px-3 py-1 bg-gray-100 text-gray-900 text-xs font-medium">Streamlit</span>
-                        <span class="px-3 py-1 bg-gray-100 text-gray-900 text-xs font-medium">Pandas</span>
-                        <span class="px-3 py-1 bg-gray-100 text-gray-900 text-xs font-medium">Plotly</span>
+                        <span class="px-3 py-1 bg-gray-100 text-gray-900 text-xs font-medium">NodeJS</span>
+                        <span class="px-3 py-1 bg-gray-100 text-gray-900 text-xs font-medium">React</span>
+                        <span class="px-3 py-1 bg-gray-100 text-gray-900 text-xs font-medium">PyTorch</span>
                     </div>
                     <div class="flex gap-3">
-                        <a href="https://google.com" class="flex-1 text-center py-2 bg-gray-900 text-white font-medium hover:bg-gray-800 transition-colors">데모 보기</a>
-                        <a href="https://google.com" class="flex-1 text-center py-2 border-2 border-gray-900 text-gray-900 font-medium hover:bg-gray-100 transition-colors">GitHub</a>
+                        <a href="https://youtu.be/KJO51396-Og" class="flex-1 text-center py-2 bg-gray-900 text-white font-medium hover:bg-gray-800 transition-colors">데모 보기</a>
+                        <a href="https://github.com/gihyeonchoi/fitgrip_backup" class="flex-1 text-center py-2 border-2 border-gray-900 text-gray-900 font-medium hover:bg-gray-100 transition-colors">GitHub</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Project Card 3: 이미지 분류 AI 모델 -->
+            <!-- Project Card 3: 안심링크 -->
             <div class="project-card bg-white border-2 border-gray-900 overflow-hidden transform transition-all duration-300 hover:shadow-2xl" data-category="ml">
                 <div class="h-48 bg-gray-900 flex items-center justify-center relative overflow-hidden">
-                    <img src="./images/ai-model-screenshot.png" alt="이미지 분류 AI 모델" class="w-full h-full object-cover opacity-80" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <img src="./images/ai-model-screenshot.png" alt="안심링크" class="w-full h-full object-cover opacity-80" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     <div class="text-6xl text-white" style="display:none;">🤖</div>
                 </div>
                 <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2">이미지 분류 AI 모델</h3>
-                    <p class="text-gray-600 text-sm mb-4 leading-relaxed">CNN을 사용한 개/고양이 이미지 분류 모델. 95% 이상의 정확도를 달성했습니다.</p>
+                    <h3 class="text-xl font-bold mb-2">피싱 방지 사이트 '안심링크'</h3>
+                    <p class="text-gray-600 text-sm mb-4 leading-relaxed">스미싱 / 피싱 사이트 차단 및 피해 예방을 위한 서비스입니다.</p>
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="px-3 py-1 bg-gray-100 text-gray-900 text-xs font-medium">TensorFlow</span>
-                        <span class="px-3 py-1 bg-gray-100 text-gray-900 text-xs font-medium">Keras</span>
-                        <span class="px-3 py-1 bg-gray-100 text-gray-900 text-xs font-medium">OpenCV</span>
-                        <span class="px-3 py-1 bg-gray-100 text-gray-900 text-xs font-medium">Flask</span>
+                        <span class="px-3 py-1 bg-gray-100 text-gray-900 text-xs font-medium">Python</span>
+                        <span class="px-3 py-1 bg-gray-100 text-gray-900 text-xs font-medium">flask</span>
+                        <span class="px-3 py-1 bg-gray-100 text-gray-900 text-xs font-medium">GeoIP2</span>
+                        <span class="px-3 py-1 bg-gray-100 text-gray-900 text-xs font-medium">Requests</span>
                     </div>
                     <div class="flex gap-3">
-                        <a href="https://google.com" class="flex-1 text-center py-2 bg-gray-900 text-white font-medium hover:bg-gray-800 transition-colors">데모 보기</a>
-                        <a href="https://google.com" class="flex-1 text-center py-2 border-2 border-gray-900 text-gray-900 font-medium hover:bg-gray-100 transition-colors">GitHub</a>
+                        <a href="https://youtu.be/MJIkinJAzVI" class="flex-1 text-center py-2 bg-gray-900 text-white font-medium hover:bg-gray-800 transition-colors">데모 보기</a>
+                        <a href="https://github.com/gihyeonchoi/hanium" class="flex-1 text-center py-2 border-2 border-gray-900 text-gray-900 font-medium hover:bg-gray-100 transition-colors">GitHub</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Project Card 4: 이커머스 플랫폼 -->
+            <!-- Project Card 4: 얼굴인식 출입관리 시스템 -->
             <div class="project-card bg-white border-2 border-gray-900 overflow-hidden transform transition-all duration-300 hover:shadow-2xl" data-category="web">
                 <div class="h-48 bg-gray-900 flex items-center justify-center relative overflow-hidden">
                     <img src="./images/ecommerce-screenshot.png" alt="이커머스 플랫폼" class="w-full h-full object-cover opacity-80" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     <div class="text-6xl text-white" style="display:none;">🛒</div>
                 </div>
                 <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2">이커머스 플랫폼</h3>
-                    <p class="text-gray-600 text-sm mb-4 leading-relaxed">풀스택 이커머스 사이트. 결제 시스템, 관리자 페이지, 리뷰 시스템을 구현했습니다.</p>
+                    <h3 class="text-xl font-bold mb-2">얼굴인식 출입관리 시스템</h3>
+                    <p class="text-gray-600 text-sm mb-4 leading-relaxed">얼굴 인식과 AWS 클라우드를 활용해 어디서든 출입을 제어할 수 있는 IoT 도어락 서비스입니다.</p>
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="px-3 py-1 bg-gray-100 text-gray-900 text-xs font-medium">React</span>
-                        <span class="px-3 py-1 bg-gray-100 text-gray-900 text-xs font-medium">Express</span>
-                        <span class="px-3 py-1 bg-gray-100 text-gray-900 text-xs font-medium">MySQL</span>
-                        <span class="px-3 py-1 bg-gray-100 text-gray-900 text-xs font-medium">Stripe</span>
+                        <span class="px-3 py-1 bg-gray-100 text-gray-900 text-xs font-medium">Python</span>
+                        <span class="px-3 py-1 bg-gray-100 text-gray-900 text-xs font-medium">django</span>
+                        <span class="px-3 py-1 bg-gray-100 text-gray-900 text-xs font-medium">AWS EC2</span>
+                        <span class="px-3 py-1 bg-gray-100 text-gray-900 text-xs font-medium">MCU 제어 (ESP32)</span>
                     </div>
                     <div class="flex gap-3">
-                        <a href="https://google.com" class="flex-1 text-center py-2 bg-gray-900 text-white font-medium hover:bg-gray-800 transition-colors">데모 보기</a>
+                        <a href="https://youtu.be/OX9yhg3c4fg" class="flex-1 text-center py-2 bg-gray-900 text-white font-medium hover:bg-gray-800 transition-colors">데모 보기</a>
                         <a href="https://google.com" class="flex-1 text-center py-2 border-2 border-gray-900 text-gray-900 font-medium hover:bg-gray-100 transition-colors">GitHub</a>
                     </div>
                 </div>
@@ -347,48 +234,9 @@ html :
 
         <!-- Footer -->
         <footer class="mt-20 py-8 border-t border-gray-200 text-center text-gray-600">
-            <p>&copy; 2024 Your Name. All rights reserved.</p>
+            <p>&copy; 2025 Choi GiHyeon. All rights reserved.</p>
         </footer>
     </div>
-
-    <script>
-        // 필터 기능
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const projectCards = document.querySelectorAll('.project-card');
-
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                // 활성 버튼 스타일 변경
-                filterBtns.forEach(b => {
-                    b.classList.remove('bg-gray-900', 'text-white');
-                    b.classList.add('bg-white', 'text-gray-900', 'border-2', 'border-gray-900');
-                });
-                btn.classList.remove('bg-white', 'text-gray-900', 'border-2', 'border-gray-900');
-                btn.classList.add('bg-gray-900', 'text-white');
-
-                // 카드 필터링 (자연스럽게)
-                const category = btn.dataset.category;
-                projectCards.forEach(card => {
-                    if (category === 'all' || card.dataset.category === category) {
-                        card.classList.remove('hidden');
-                    } else {
-                        card.classList.add('hidden');
-                    }
-                });
-            });
-        });
-
-                // 페이지 로드 시 애니메이션
-        window.addEventListener('load', () => {
-            projectCards.forEach((card, index) => {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(20px)';
-                setTimeout(() => {
-                    card.style.opacity = '1';
-                    card.style.transform = 'translateY(0)';
-                }, index * 100);
-            });
-        });
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>
