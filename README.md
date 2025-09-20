@@ -11,7 +11,7 @@
 
 ## **👤 정보 (Info)**
 
-  * **Email**: `neibie123@gmail.com`
+  * **Email**: `choigihyeon.98@gmail.com`
   * **Phone**: `010-4002-7335`
   * **Location**: `Chuncheon-si, Gangwon-do, Republic of Korea`
   * **GitHub**: [https://github.com/gihyeonchoi](https://github.com/gihyeonchoi)
@@ -59,10 +59,12 @@
 
 ### **5. 실시간 건물 관리 시스템**
 
-  * **설명**: 실시간 출입문 통제와 Open-Vocabulary Object Detection 기술을 활용하여 이상 상황을 감지하는 지능형 보안 시스템입니다.
+  * **설명**: 건물의 실시간 출입문 통제와 Open-Vocabulary Object Detection 기술을 활용하여 이상 상황을 감지하는 지능형 보안 시스템입니다.
   * **기술**: `Django`, `MCU (ESP32)`, `PyTorch + CLIP`, `YOLO`
   * **링크**:
-      * 데모 및 GitHub 링크 준비 중
+      * [**데모 영상 보기 (1)**](https://youtu.be/2EMWvNXkJ8g)
+      * [**데모 영상 보기 (2)**](https://youtu.be/saZ0zsFKDy4)
+      * [**GitHub 저장소**](https://github.com/gihyeonchoi/security_server)
 
 -----
 
